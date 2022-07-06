@@ -20,6 +20,11 @@ elLine.forEach((item) => {
   });
 });
 
+window.addEventListener('scroll', () => {
+  header = document.querySelector("header");
+  header.classList.toggle("header-bg",window.scrollY > 200);
+})
+
 const links = document.querySelectorAll(".nav__item");
 const sections = document.querySelectorAll("section");
 function changeLinkState() {
@@ -40,3 +45,8 @@ var typed = new Typed(".name", {
   backSpeed: 80,
   loop: true,
 });
+
+// window.addEventListener("scroll",function( {
+//   header = document.querySelector("header");
+//   header.classList.toggle("header-bg",window.scrollY > 200);
+
